@@ -1,10 +1,11 @@
 // Events Models
-export * from "./events/Event.model";
+export * from "./events/event.model";
+export * from "./events/event-organizer.model";
 
 // Entities Models
-export * from "./entities/Entity.model";
-export * from "./entities/Business.model";
-export * from "./entities/Building.model";
+export * from "./entities/entity.model";
+export * from "./entities/business.model";
+export * from "./entities/building.model";
 
 // Address Models
-export * from "./address/Address.model";
+export * from "./address/address.model";

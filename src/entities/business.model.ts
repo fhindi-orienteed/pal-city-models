@@ -1,5 +1,5 @@
-import { EntityModel } from "./Entity.model";
-import { AddressModel } from "../address/Address.model";
+import { EntityModel } from "./entity.model";
+import { AddressModel } from "../address/address.model";
 
 export class BusinessModel extends EntityModel {
     title: string;
