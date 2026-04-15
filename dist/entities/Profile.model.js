@@ -1,4 +1,4 @@
-import { EntityModel } from "./Entity.model";
+import { EntityModel } from "./entity.model";
 export class ProfileModel extends EntityModel {
     constructor(data) {
         super(data);
