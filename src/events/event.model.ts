@@ -4,12 +4,13 @@ import { EventOrganizerModel } from "./event-organizer.model.js";
 export class EventModel {
   id: number;
   handle: string;
+  tags: string[];
+  status: string;
+  sequence: number;
+
 
   category?: string;
-  tags?: string[];
-  status?: string;
   visibility?: string;
-  sequence?: number;
   type?: string;
 
   title?: string;
@@ -18,10 +19,10 @@ export class EventModel {
 
   startDate?: string;
   endDate?: string;
-  isFullDay?: boolean;
+  isFullDay: boolean;
 
   coverImage?: string;
-  media?: string[];
+  media: string[];
   registrationStatus?: string;
   ticketType?: string;
   address?: AddressModel;
@@ -29,19 +30,21 @@ export class EventModel {
 
   constructor(data: any) {
     this.id = data.id;
-    this.handle = data.handle;
+    this.handle = data.handle || "";
     this.category = data.category;
-    this.tags = data.tags;
+    this.tags = data.tags?.split(",") || [];
+
     this.title = data.title;
     this.shortDescription = data.shortDescription;
     this.longDescription = data.longDescription;
     this.startDate = data.startDate;
     this.endDate = data.endDate;
-    this.isFullDay = data.isFullDay ?? false;
+    this.isFullDay = !!data.isFullDay;
+
     this.coverImage = data.coverImage;
     this.media = data.media || [];
-    this.status = data.status;
-    this.sequence = data.sequence;
+    this.status = data.status || 'draft';
+    this.sequence = data.sequence || 0;
     this.type = data.type;
     this.visibility = data.visibility;
     this.registrationStatus = data.registrationStatus;
