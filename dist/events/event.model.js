@@ -1,8 +1,10 @@
+import { AddressModel } from "../address/address.model";
+import { EventOrganizerModel } from "./event-organizer.model";
 export class EventModel {
     constructor(data) {
         var _a;
         this.id = data.id;
-        this.identifier = data.identifier;
+        this.handle = data.handle;
         this.category = data.category;
         this.tags = data.tags;
         this.title = data.title;
@@ -19,5 +21,11 @@ export class EventModel {
         this.visibility = data.visibility;
         this.registrationStatus = data.registrationStatus;
         this.ticketType = data.ticketType;
+        if (data.address) {
+            this.address = new AddressModel(data.address);
+        }
+        if (data.organizer) {
+            this.organizer = new EventOrganizerModel(data.organizer);
+        }
     }
 }
