@@ -1,5 +1,5 @@
-import { AddressModel } from "../address/address.model";
-import { EventOrganizerModel } from "./event-organizer.model";
+import { AddressModel } from "../address/address.model.js";
+import { EventOrganizerModel } from "./event-organizer.model.js";
 export declare class EventModel {
     id: number;
     handle: string;

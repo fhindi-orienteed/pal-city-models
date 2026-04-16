@@ -1,5 +1,5 @@
-import { EntityModel } from "./entity.model";
-import { AddressModel } from "../address/address.model";
+import { EntityModel } from "./entity.model.js";
+import { AddressModel } from "../address/address.model.js";
 export class BusinessModel extends EntityModel {
     constructor(data) {
         super(data);
