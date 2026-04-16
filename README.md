@@ -5,13 +5,13 @@ Shared TypeScript data models for the **Pal City** platform. This package provid
 ## Installation
 
 ```bash
-npm install https://github.com/fhindi-orienteed/pal-city-models/tarball/main
+npm install pal-city-models
 ```
 
 ## Quick Start
 
 ```typescript
-import { EventModel, BusinessModel, AddressModel } from 'pal-city-models';
+import { EventModel, BusinessModel, AddressModel } from "pal-city-models";
 
 // Create an event from API data
 const event = new EventModel(apiResponse);
@@ -20,21 +20,21 @@ console.log(event.title, event.startDate);
 // Create a business with an address
 const business = new BusinessModel({
   id: 1,
-  identifier: 'cafe-123',
-  status: 'active',
-  type: 'restaurant',
-  title: 'Downtown Café',
-  summary: 'A cozy café in the heart of the city.',
-  description: 'Full description here...',
-  coverImage: '/images/cafe.jpg',
-  tags: ['coffee', 'brunch'],
+  identifier: "cafe-123",
+  status: "active",
+  type: "restaurant",
+  title: "Downtown Café",
+  summary: "A cozy café in the heart of the city.",
+  description: "Full description here...",
+  coverImage: "/images/cafe.jpg",
+  tags: ["coffee", "brunch"],
   address: {
-    country: 'Palestine',
-    state: 'West Bank',
-    city: 'Ramallah',
-    addressLine1: 'Main Street 12',
-    addressLine2: '',
-    zipCode: '00970',
+    country: "Palestine",
+    state: "West Bank",
+    city: "Ramallah",
+    addressLine1: "Main Street 12",
+    addressLine2: "",
+    zipCode: "00970",
   },
 });
 ```
