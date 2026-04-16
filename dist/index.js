@@ -1,9 +1,9 @@
 // Events Models
-export * from "./events/event.model.js";
-export * from "./events/event-organizer.model.js";
+export * from "./events/event.model";
+export * from "./events/event-organizer.model";
 // Entities Models
-export * from "./entities/entity.model.js";
-export * from "./entities/business.model.js";
-export * from "./entities/building.model.js";
+export * from "./entities/entity.model";
+export * from "./entities/business.model";
+export * from "./entities/building.model";
 // Address Models
-export * from "./address/address.model.js";
+export * from "./address/address.model";

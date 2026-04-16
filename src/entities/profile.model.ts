@@ -1,6 +1,6 @@
-import { EntityModel } from "./entity.model.js";
+import EntityModel from "./entity.model";
 
-export class ProfileModel extends EntityModel {
+export default class ProfileModel extends EntityModel {
     constructor(data: any) {
         super(data);
     }

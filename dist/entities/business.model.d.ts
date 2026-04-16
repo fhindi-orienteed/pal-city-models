@@ -1,9 +1,8 @@
-import { EntityModel } from "./entity.model.js";
-import { AddressModel } from "../address/address.model.js";
+import EntityModel from "./entity.model";
+import AddressModel from "../address/address.model";
 export declare class BusinessModel extends EntityModel {
     title: string;
     summary: string;
-    description: string;
     coverImage: string;
     tags: string[];
     address?: AddressModel;
