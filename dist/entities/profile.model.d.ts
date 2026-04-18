@@ -1,4 +1,4 @@
-import { EntityModel } from "./entity.model";
-export declare class ProfileModel extends EntityModel {
+import EntityModel from "./entity.model";
+export default class ProfileModel extends EntityModel {
     constructor(data: any);
 }
