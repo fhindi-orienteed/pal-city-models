@@ -1,6 +1,6 @@
-import AddressModel from "../address/address.model";
-import EntityAttributeModel from "./entity-attribute.model";
-import EntityDescriptionModel from "./entity-description.model";
+import AddressModel from "../address/address.model.js";
+import EntityAttributeModel from "./entity-attribute.model.js";
+import EntityDescriptionModel from "./entity-description.model.js";
 
 export default class EntityModel {
     id: number;

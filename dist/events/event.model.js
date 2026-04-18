@@ -1,6 +1,6 @@
-import AddressModel from "../address/address.model";
-import { EventOrganizerModel } from "./event-organizer.model";
-import { MediaModel } from "../common/media.model";
+import AddressModel from "../address/address.model.js";
+import { EventOrganizerModel } from "./event-organizer.model.js";
+import { MediaModel } from "../common/media.model.js";
 export class EventModel {
     constructor(data) {
         var _a, _b;
