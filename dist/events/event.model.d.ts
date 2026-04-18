@@ -1,5 +1,6 @@
 import AddressModel from "../address/address.model";
 import { EventOrganizerModel } from "./event-organizer.model";
+import { MediaModel } from "../common/media.model";
 export declare class EventModel {
     id: number;
     handle: string;
@@ -15,8 +16,8 @@ export declare class EventModel {
     startDate?: string;
     endDate?: string;
     isFullDay: boolean;
-    coverImage?: string;
-    media: string[];
+    thumbnail?: string;
+    media: MediaModel[];
     registrationStatus?: string;
     ticketType?: string;
     address?: AddressModel;

@@ -1,5 +1,6 @@
 import AddressModel from "../address/address.model";
 import { EventOrganizerModel } from "./event-organizer.model";
+import { MediaModel } from "../common/media.model";
 
 export class EventModel {
   id: number;
@@ -21,8 +22,8 @@ export class EventModel {
   endDate?: string;
   isFullDay: boolean;
 
-  coverImage?: string;
-  media: string[];
+  thumbnail?: string;
+  media: MediaModel[] = [];
   registrationStatus?: string;
   ticketType?: string;
   address?: AddressModel;
@@ -41,8 +42,6 @@ export class EventModel {
     this.endDate = data.endDate;
     this.isFullDay = !!data.isFullDay;
 
-    this.coverImage = data.coverImage;
-    this.media = data.media || [];
     this.status = data.status || 'draft';
     this.sequence = data.sequence || 0;
     this.type = data.type;
@@ -56,6 +55,11 @@ export class EventModel {
 
     if (data.organizer) {
       this.organizer = new EventOrganizerModel(data.organizer);
+    }
+
+    if (data.media) {
+      this.thumbnail = data.media.find((m: any) => m.isDefault)?.url;
+      this.media = data.media.map((m: any) => new MediaModel(m));
     }
   }
 }
