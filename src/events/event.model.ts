@@ -33,7 +33,7 @@ export class EventModel {
     this.id = data.id;
     this.handle = data.handle || "";
     this.category = data.category;
-    this.tags = data.tags?.split(",") || [];
+    this.tags = data.tags?.split(",").filter((t: string) => t.trim() !== "") || [];
 
     this.title = data.title;
     this.shortDescription = data.shortDescription;

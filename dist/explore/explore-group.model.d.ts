@@ -1,4 +1,4 @@
-import ExploreCategoryModel from "./explore-category.model";
+import ExploreCategoryModel from "./explore-category.model.js";
 export default class ExploreGroupModel {
     id: number;
     totalItems: number;

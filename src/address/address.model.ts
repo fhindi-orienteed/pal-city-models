@@ -1,5 +1,5 @@
 
-import LocationModel from "./location.model";
+import LocationModel from "./location.model.js";
 
 export default class AddressModel {
   country: string;

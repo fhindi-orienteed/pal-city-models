@@ -1,4 +1,4 @@
-import { AdsDescriptionModel } from "./ads-description.model";
+import { AdsDescriptionModel } from "./ads-description.model.js";
 
 export class AdsModel {
     id: number;

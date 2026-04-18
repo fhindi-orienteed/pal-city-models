@@ -8,7 +8,7 @@ export class EventModel {
         this.id = data.id;
         this.handle = data.handle || "";
         this.category = data.category;
-        this.tags = ((_a = data.tags) === null || _a === void 0 ? void 0 : _a.split(",")) || [];
+        this.tags = ((_a = data.tags) === null || _a === void 0 ? void 0 : _a.split(",").filter((t) => t.trim() !== "")) || [];
         this.title = data.title;
         this.shortDescription = data.shortDescription;
         this.longDescription = data.longDescription;
