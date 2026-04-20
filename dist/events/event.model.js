@@ -4,7 +4,6 @@ import { MediaModel } from "../common/media.model.js";
 import EventDescriptionModel from "./event-description.model.js";
 export class EventModel {
     constructor(data) {
-        var _a;
         this.tags = [];
         this.media = [];
         this.id = data.id;
@@ -40,8 +39,11 @@ export class EventModel {
             this.organizer = new EventOrganizerModel(data.organizer);
         }
         if (data.media) {
-            this.thumbnail = (_a = data.media.find((m) => m.isDefault)) === null || _a === void 0 ? void 0 : _a.url;
             this.media = data.media.map((m) => new MediaModel(m));
+            if (this.media.length > 0) {
+                const defaultMedia = this.media.find((m) => m.isDefault);
+                this.thumbnail = defaultMedia ? defaultMedia.url : this.media[0].url;
+            }
         }
     }
 }
