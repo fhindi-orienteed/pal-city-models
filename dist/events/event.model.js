@@ -19,8 +19,11 @@ export class EventModel {
         this.visibility = data.visibility;
         this.registrationStatus = data.registrationStatus;
         this.ticketType = data.ticketType;
-        if (data.tags) {
-            this.tags = data.tags.split(",").filter((t) => t.trim() !== "") || [];
+        if (Array.isArray(data.tags)) {
+            this.tags = data.tags;
+        }
+        else if (typeof data.tags === "string") {
+            this.tags = data.tags.split(",").filter((t) => t.trim() !== "");
         }
         if (data.description) {
             if (Array.isArray(data.description) && data.description.length > 0) {
