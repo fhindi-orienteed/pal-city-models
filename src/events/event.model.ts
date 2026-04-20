@@ -64,8 +64,11 @@ export class EventModel {
     }
 
     if (data.media) {
-      this.thumbnail = data.media.find((m: any) => m.isDefault)?.url;
       this.media = data.media.map((m: any) => new MediaModel(m));
+      if (this.media.length > 0) {
+        const defaultMedia = this.media.find((m: any) => m.isDefault);
+        this.thumbnail = defaultMedia ? defaultMedia.url : this.media[0].url;
+      }
     }
   }
 }
