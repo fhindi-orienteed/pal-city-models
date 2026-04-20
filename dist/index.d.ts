@@ -4,4 +4,7 @@ export * from "./entities/entity.model.js";
 export * from "./entities/business.model.js";
 export * from "./entities/building.model.js";
 export * from "./address/address.model.js";
+export * from "./address/location.model.js";
 export * from "./common/media.model.js";
+export * from "./ads/ads.model.js";
+export * from "./ads/ads-description.model.js";
