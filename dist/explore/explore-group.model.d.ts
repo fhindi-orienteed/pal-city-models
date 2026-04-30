@@ -1,10 +1,13 @@
 import ExploreCategoryModel from "./explore-category.model.js";
+import ExploreGroupDescriptionModel from "./explore-group-description.model.js";
 export default class ExploreGroupModel {
     id: number;
+    handle: string;
     totalItems: number;
     sequence: number;
     status: string;
-    title: string;
+    mobileHomeFeed: boolean;
     categories: ExploreCategoryModel[];
+    description?: ExploreGroupDescriptionModel;
     constructor(data: any);
 }

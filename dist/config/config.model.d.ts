@@ -3,6 +3,7 @@ export default class ConfigModel {
     group: string;
     namespace: string;
     key: string;
+    type: string;
     value: string;
     title?: string;
     description?: string;
