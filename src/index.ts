@@ -17,3 +17,7 @@ export * from "./common/media.model.js";
 // Ads Models
 export * from "./ads/ads.model.js";
 export * from "./ads/ads-description.model.js";
+
+// Explore Models
+export * from "./explore/explore-group.model.js";
+export * from "./explore/explore-category.model.js";
