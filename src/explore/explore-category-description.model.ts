@@ -1,5 +1,5 @@
 
-export default class ExploreCategoryDescriptionModel {
+export class ExploreCategoryDescriptionModel {
     id: number;
     categoryId: number;
     title?: string;

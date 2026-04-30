@@ -1,4 +1,4 @@
-export default class ExploreGroupDescriptionModel {
+export declare class ExploreGroupDescriptionModel {
     id: number;
     groupId: number;
     title?: string;

@@ -1,6 +1,6 @@
-import ExploreCategoryModel from "./explore-category.model.js";
-import ExploreGroupDescriptionModel from "./explore-group-description.model.js";
-export default class ExploreGroupModel {
+import { ExploreCategoryModel } from "./explore-category.model.js";
+import { ExploreGroupDescriptionModel } from "./explore-group-description.model.js";
+export declare class ExploreGroupModel {
     id: number;
     handle: string;
     totalItems: number;

@@ -1,5 +1,5 @@
-import ExploreCategoryDescriptionModel from "./explore-category-description.model.js";
-export default class ExploreCategoryModel {
+import { ExploreCategoryDescriptionModel } from "./explore-category-description.model.js";
+export class ExploreCategoryModel {
     constructor(data) {
         this.id = data.id;
         this.handle = data.handle;

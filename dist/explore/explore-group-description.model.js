@@ -1,4 +1,4 @@
-export default class ExploreGroupDescriptionModel {
+export class ExploreGroupDescriptionModel {
     constructor(data) {
         this.id = data.id;
         this.groupId = data.groupId;

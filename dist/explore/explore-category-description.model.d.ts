@@ -1,4 +1,4 @@
-export default class ExploreCategoryDescriptionModel {
+export declare class ExploreCategoryDescriptionModel {
     id: number;
     categoryId: number;
     title?: string;

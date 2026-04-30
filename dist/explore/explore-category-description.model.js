@@ -1,4 +1,4 @@
-export default class ExploreCategoryDescriptionModel {
+export class ExploreCategoryDescriptionModel {
     constructor(data) {
         this.id = data.id;
         this.categoryId = data.categoryId;
