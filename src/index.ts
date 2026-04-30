@@ -21,3 +21,5 @@ export * from "./ads/ads-description.model.js";
 // Explore Models
 export * from "./explore/explore-group.model.js";
 export * from "./explore/explore-category.model.js";
+export * from "./explore/explore-group-description.model.js";
+export * from "./explore/explore-category-description.model.js";
