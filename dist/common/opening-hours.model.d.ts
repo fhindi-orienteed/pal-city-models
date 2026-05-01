@@ -12,7 +12,7 @@ export type OpeningHoursConfig = {
     timezone?: string;
     specialDays?: SpecialDay[];
 };
-export declare class OpeningHours {
+export declare class OpeningHoursModel {
     private schedule;
     private timezone;
     private specialDays;

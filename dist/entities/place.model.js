@@ -1,37 +1,30 @@
+import { MediaModel } from "../common/media.model.js";
+import { OpeningHoursModel } from "../common/opening-hours.model.js";
+import { SocialLinksModel } from "../common/social-links.model.js";
 import { EntityModel } from "./entity.model.js";
 export class PlaceModel extends EntityModel {
     constructor(data) {
-        var _a;
         super(data);
+        this.media = [];
         this.tags = [];
-        if (this.attributes && this.attributes.length > 0) {
-            this.populateAttributes();
+        this.category = data.category;
+        if (data.media) {
+            this.media = data.media.map((item) => new MediaModel(item));
         }
-        else {
-            this.summary = data.summary;
-            this.coverImage = data.coverImage;
-            this.tags = (_a = data.tags) !== null && _a !== void 0 ? _a : [];
+        if (data.tags) {
+            this.tags = data.tags;
+        }
+        if (data.openingHours) {
+            this.openingHours = new OpeningHoursModel(data.openingHours);
+        }
+        if (data.socialLinks) {
+            this.socialLinks = new SocialLinksModel(data.socialLinks);
         }
     }
-    populateAttributes() {
-        var _a;
-        (_a = this.attributes) === null || _a === void 0 ? void 0 : _a.forEach((attr) => {
-            switch (attr.key) {
-                case 'summary':
-                    this.summary = attr.value;
-                    break;
-                case 'coverImage':
-                    this.coverImage = attr.value;
-                    break;
-                case 'tags':
-                    try {
-                        this.tags = JSON.parse(attr.value);
-                    }
-                    catch {
-                        this.tags = attr.value ? attr.value.split(',') : [];
-                    }
-                    break;
-            }
-        });
+    get thumbnail() {
+        if (this.media && this.media.length > 0) {
+            return this.media[0].url;
+        }
+        return undefined;
     }
 }

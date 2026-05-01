@@ -1,5 +1,7 @@
 import { MediaModel } from "../common/media.model.js";
 import { EntityModel } from "./entity.model.js";
+import { OpeningHoursModel } from "../common/opening-hours.model.js";
+import { SocialLinksModel } from "../common/social-links.model.js";
 export class BusinessModel extends EntityModel {
     constructor(data) {
         super(data);
@@ -17,6 +19,12 @@ export class BusinessModel extends EntityModel {
                 const defaultMedia = this.media.find((m) => m.isDefault);
                 this.thumbnail = defaultMedia ? defaultMedia.url : this.media[0].url;
             }
+        }
+        if (data.openingHours) {
+            this.openingHours = new OpeningHoursModel(data.openingHours);
+        }
+        if (data.socialLinks) {
+            this.socialLinks = new SocialLinksModel(data.socialLinks);
         }
     }
 }

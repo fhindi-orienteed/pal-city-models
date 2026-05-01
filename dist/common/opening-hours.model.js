@@ -1,4 +1,4 @@
-export class OpeningHours {
+export class OpeningHoursModel {
     constructor(config) {
         this.schedule = {
             monday: [],

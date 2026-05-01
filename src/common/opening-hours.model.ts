@@ -23,7 +23,7 @@ export type OpeningHoursConfig = {
     specialDays?: SpecialDay[];
 };
 
-export class OpeningHours {
+export class OpeningHoursModel {
     private schedule: Record<DayOfWeek, TimeRange[]>;
     private timezone: string;
     private specialDays: Map<string, TimeRange[]>;

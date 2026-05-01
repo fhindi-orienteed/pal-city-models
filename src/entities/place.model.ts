@@ -1,39 +1,41 @@
+import { MediaModel } from "../common/media.model.js";
+import { OpeningHoursModel } from "../common/opening-hours.model.js";
+import { SocialLinksModel } from "../common/social-links.model.js";
 import { EntityModel } from "./entity.model.js";
 
 export class PlaceModel extends EntityModel {
-    summary?: string;
-    coverImage?: string;
+    media: MediaModel[] = [];
     tags: string[] = [];
+    category?: string;
+    openingHours?: OpeningHoursModel;
+    socialLinks?: SocialLinksModel;
 
     constructor(data: any) {
         super(data);
 
-        if (this.attributes && this.attributes.length > 0) {
-            this.populateAttributes();
-        } else {
-            this.summary = data.summary;
-            this.coverImage = data.coverImage;
-            this.tags = data.tags ?? [];
+        this.category = data.category;
+
+        if (data.media) {
+            this.media = data.media.map((item: any) => new MediaModel(item));
+        }
+
+        if (data.tags) {
+            this.tags = data.tags;
+        }
+
+        if (data.openingHours) {
+            this.openingHours = new OpeningHoursModel(data.openingHours);
+        }
+
+        if (data.socialLinks) {
+            this.socialLinks = new SocialLinksModel(data.socialLinks);
         }
     }
 
-    private populateAttributes() {
-        this.attributes?.forEach((attr: any) => {
-            switch (attr.key) {
-                case 'summary':
-                    this.summary = attr.value;
-                    break;
-                case 'coverImage':
-                    this.coverImage = attr.value;
-                    break;
-                case 'tags':
-                    try {
-                        this.tags = JSON.parse(attr.value);
-                    } catch {
-                        this.tags = attr.value ? attr.value.split(',') : [];
-                    }
-                    break;
-            }
-        });
+    get thumbnail(): string | undefined {
+        if (this.media && this.media.length > 0) {
+            return this.media[0].url;
+        }
+        return undefined;
     }
 }

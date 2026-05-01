@@ -19,3 +19,5 @@ export * from "./explore/explore-category-description.model.js";
 export * from "./news/news.model.js";
 export * from "./news/news-description.model.js";
 export * from "./service/service.model.js";
+export * from "./offers/offer.model.js";
+export * from "./offers/offer-description.model.js";

@@ -1,4 +1,4 @@
-export class SocialLinks {
+export class SocialLinksModel {
     constructor(data) {
         this.facebook = data.facebook;
         this.twitter = data.twitter;

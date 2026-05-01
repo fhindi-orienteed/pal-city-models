@@ -1,4 +1,4 @@
-export declare class SocialLinks {
+export declare class SocialLinksModel {
     facebook?: string;
     twitter?: string;
     instagram?: string;

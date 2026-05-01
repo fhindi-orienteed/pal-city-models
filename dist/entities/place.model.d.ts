@@ -1,8 +1,13 @@
+import { MediaModel } from "../common/media.model.js";
+import { OpeningHoursModel } from "../common/opening-hours.model.js";
+import { SocialLinksModel } from "../common/social-links.model.js";
 import { EntityModel } from "./entity.model.js";
 export declare class PlaceModel extends EntityModel {
-    summary?: string;
-    coverImage?: string;
+    media: MediaModel[];
     tags: string[];
+    category?: string;
+    openingHours?: OpeningHoursModel;
+    socialLinks?: SocialLinksModel;
     constructor(data: any);
-    private populateAttributes;
+    get thumbnail(): string | undefined;
 }

@@ -35,3 +35,7 @@ export * from "./news/news-description.model.js";
 
 // Service Models
 export * from "./service/service.model.js";
+
+// Offer Models
+export * from "./offers/offer.model.js";
+export * from "./offers/offer-description.model.js";
