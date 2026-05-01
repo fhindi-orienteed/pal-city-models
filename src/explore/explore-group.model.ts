@@ -7,6 +7,7 @@ export class ExploreGroupModel {
     totalItems: number;
     sequence: number;
     status: string;
+    thumbnail?: string;
     mobileHomeFeed: boolean;
     categories: ExploreCategoryModel[] = [];
     description?: ExploreGroupDescriptionModel;
@@ -14,6 +15,7 @@ export class ExploreGroupModel {
     constructor(data: any) {
         this.id = data.id;
         this.handle = data.handle;
+        this.thumbnail = data.thumbnail;
         this.totalItems = data.totalItems || 0;
         this.status = data.status || 'draft';
         this.mobileHomeFeed = data.mobileHomeFeed || false;
