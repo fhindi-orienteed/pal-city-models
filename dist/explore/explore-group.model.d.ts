@@ -6,6 +6,7 @@ export declare class ExploreGroupModel {
     totalItems: number;
     sequence: number;
     status: string;
+    thumbnail?: string;
     mobileHomeFeed: boolean;
     categories: ExploreCategoryModel[];
     description?: ExploreGroupDescriptionModel;

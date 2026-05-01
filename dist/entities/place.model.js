@@ -1,5 +1,5 @@
-import EntityModel from "./entity.model.js";
-export default class PlaceModel extends EntityModel {
+import { EntityModel } from "./entity.model.js";
+export class PlaceModel extends EntityModel {
     constructor(data) {
         var _a;
         super(data);

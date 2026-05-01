@@ -1,4 +1,4 @@
-export default class NewsDescriptionModel {
+export class NewsDescriptionModel {
     constructor(data) {
         this.title = data.title;
         this.description = data.description;

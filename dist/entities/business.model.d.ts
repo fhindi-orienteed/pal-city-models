@@ -1,10 +1,8 @@
-import EntityModel from "./entity.model.js";
-import AddressModel from "../address/address.model.js";
+import { MediaModel } from "../common/media.model.js";
+import { EntityModel } from "./entity.model.js";
 export declare class BusinessModel extends EntityModel {
-    title: string;
-    summary: string;
-    coverImage: string;
+    thumbnail?: string;
+    media: MediaModel[];
     tags: string[];
-    address?: AddressModel;
     constructor(data: any);
 }

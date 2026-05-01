@@ -1,5 +1,6 @@
-export default class EntityDescriptionModel {
+export declare class EntityDescriptionModel {
     title?: string;
+    entityId?: number;
     shortDescription?: string;
     longDescription?: string;
     langId?: number;

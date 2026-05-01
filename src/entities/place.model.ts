@@ -1,6 +1,6 @@
-import EntityModel from "./entity.model.js";
+import { EntityModel } from "./entity.model.js";
 
-export default class PlaceModel extends EntityModel {
+export class PlaceModel extends EntityModel {
     summary?: string;
     coverImage?: string;
     tags: string[] = [];

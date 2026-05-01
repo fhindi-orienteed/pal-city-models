@@ -1,7 +1,7 @@
-import AddressModel from "../address/address.model.js";
+import { AddressModel } from "../address/address.model.js";
 import { EventOrganizerModel } from "./event-organizer.model.js";
 import { MediaModel } from "../common/media.model.js";
-import EventDescriptionModel from "./event-description.model.js";
+import { EventDescriptionModel } from "./event-description.model.js";
 export class EventModel {
     constructor(data) {
         this.tags = [];

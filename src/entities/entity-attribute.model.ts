@@ -1,4 +1,4 @@
-export default class EntityAttributeModel {
+export class EntityAttributeModel {
     id: number;
     entityId: number;
     key: string;

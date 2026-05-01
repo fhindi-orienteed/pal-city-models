@@ -1,4 +1,4 @@
-export default class ConfigModel {
+export class ConfigModel {
     constructor(data) {
         this.id = data.id;
         this.group = data.group;

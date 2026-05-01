@@ -1,4 +1,4 @@
-export default class ServiceModel {
+export class ServiceModel {
     id: number;
     title: string;
     thumbnail: string;

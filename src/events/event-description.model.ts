@@ -1,5 +1,5 @@
 
-export default class EventDescriptionModel {
+export class EventDescriptionModel {
     id: number;
     eventId: number;
     langId: number;

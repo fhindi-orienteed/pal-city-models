@@ -1,4 +1,4 @@
-export default class EntityAttributeModel {
+export class EntityAttributeModel {
     constructor(data) {
         this.id = data.id;
         this.entityId = data.entityId;

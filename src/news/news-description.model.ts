@@ -1,5 +1,5 @@
 
-export default class NewsDescriptionModel {
+export class NewsDescriptionModel {
     title?: string;
     description?: string;
     image?: string;

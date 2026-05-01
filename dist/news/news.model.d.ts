@@ -1,5 +1,5 @@
-import NewsDescriptionModel from "./news-description.model.js";
-export default class NewsModel {
+import { NewsDescriptionModel } from "./news-description.model.js";
+export declare class NewsModel {
     id: number;
     type: string;
     status: string;

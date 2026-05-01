@@ -1,5 +1,5 @@
-import NewsDescriptionModel from "./news-description.model.js";
-export default class NewsModel {
+import { NewsDescriptionModel } from "./news-description.model.js";
+export class NewsModel {
     constructor(data) {
         this.id = data.id;
         this.type = data.type;

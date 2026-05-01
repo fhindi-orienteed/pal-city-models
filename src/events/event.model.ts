@@ -1,7 +1,7 @@
-import AddressModel from "../address/address.model.js";
+import { AddressModel } from "../address/address.model.js";
 import { EventOrganizerModel } from "./event-organizer.model.js";
 import { MediaModel } from "../common/media.model.js";
-import EventDescriptionModel from "./event-description.model.js";
+import { EventDescriptionModel } from "./event-description.model.js";
 
 export class EventModel {
   id: number;
@@ -65,8 +65,9 @@ export class EventModel {
 
     if (data.media) {
       this.media = data.media.map((m: any) => new MediaModel(m));
+
       if (this.media.length > 0) {
-        const defaultMedia = this.media.find((m: any) => m.isDefault);
+        const defaultMedia = this.media.find((m: MediaModel) => m.isDefault);
         this.thumbnail = defaultMedia ? defaultMedia.url : this.media[0].url;
       }
     }

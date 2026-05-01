@@ -1,4 +1,4 @@
-export default class EventDescriptionModel {
+export declare class EventDescriptionModel {
     id: number;
     eventId: number;
     langId: number;

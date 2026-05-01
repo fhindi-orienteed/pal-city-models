@@ -1,11 +1,11 @@
-import AddressModel from "../address/address.model.js";
-import EntityAttributeModel from "./entity-attribute.model.js";
-import EntityDescriptionModel from "./entity-description.model.js";
-export default class EntityModel {
+import { AddressModel } from "../address/address.model.js";
+import { EntityAttributeModel } from "./entity-attribute.model.js";
+import { EntityDescriptionModel } from "./entity-description.model.js";
+export class EntityModel {
     constructor(data) {
         var _a;
         this.id = data.id;
-        this.identifier = data.identifier;
+        this.handle = data.identifier;
         this.type = data.type;
         this.status = data.status;
         this.createdAt = data.createdAt;

@@ -1,6 +1,6 @@
-import NewsDescriptionModel from "./news-description.model.js";
+import { NewsDescriptionModel } from "./news-description.model.js";
 
-export default class NewsModel {
+export class NewsModel {
     id: number;
     type: string;
     status: string;

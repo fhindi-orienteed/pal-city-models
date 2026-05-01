@@ -5,6 +5,7 @@ export class ExploreGroupModel {
         this.categories = [];
         this.id = data.id;
         this.handle = data.handle;
+        this.thumbnail = data.thumbnail;
         this.totalItems = data.totalItems || 0;
         this.status = data.status || 'draft';
         this.mobileHomeFeed = data.mobileHomeFeed || false;

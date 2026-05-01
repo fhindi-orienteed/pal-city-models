@@ -1,6 +1,6 @@
 import { PaginationMetaModel } from "./pagination-meta.model.js";
 
-export default class PaginatedModel<T> {
+export class PaginatedModel<T> {
     data: T[];
     pagination: PaginationMetaModel;
 
