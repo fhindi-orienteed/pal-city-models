@@ -1,3 +1,6 @@
+import AddressModel from "../address/address.model.js";
+import { UserProfileModel } from "./user-profile.model.js";
+
 export class UserModel {
     id: number;
     username: string;
@@ -5,8 +8,10 @@ export class UserModel {
     status: string;
     role: string;
     createdDate: Date;
-    updatedDate: Date;
+    updatedDate?: Date;
+    lastLogin?: Date;
     profile?: UserProfileModel;
+    address?: AddressModel;
 
     constructor(data: any) {
         this.id = data.id;
@@ -14,40 +19,16 @@ export class UserModel {
         this.password = data.password;
         this.status = data.status;
         this.role = data.role;
+        this.lastLogin = data.lastLogin;
         this.createdDate = data.createdDate;
         this.updatedDate = data.updatedDate;
-        this.profile = data.profile ? new UserProfileModel(data.profile) : undefined;
-    }
-}
 
-export class UserProfileModel {
-    id: number;
-    userId: number;
-    firstName: string;
-    middleName: string;
-    lastName: string;
-    gender: string;
-    birthday: Date;
-    phone: string;
-    mobile: string;
-    email: string;
-    image: string;
-    createdDate: Date;
-    updatedDate: Date;
+        if (data.profile) {
+            this.profile = new UserProfileModel(data.profile);
+        }
 
-    constructor(data: any) {
-        this.id = data.id;
-        this.userId = data.userId;
-        this.firstName = data.firstName;
-        this.middleName = data.middleName;
-        this.lastName = data.lastName;
-        this.gender = data.gender;
-        this.birthday = data.birthday;
-        this.phone = data.phone;
-        this.mobile = data.mobile;
-        this.email = data.email;
-        this.image = data.image;
-        this.createdDate = data.createdDate;
-        this.updatedDate = data.updatedDate;
+        if (data.address) {
+            this.address = new AddressModel(data.address);
+        }
     }
 }
