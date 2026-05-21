@@ -1,7 +1,7 @@
-export default class NewsDescriptionModel {
+export class NewsDescriptionModel {
     constructor(data) {
         this.title = data.title;
-        this.description = data.description;
-        this.image = data.image;
+        this.shortDescription = data.shortDescription;
+        this.longDescription = data.longDescription;
     }
 }

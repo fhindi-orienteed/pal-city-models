@@ -1,7 +1,7 @@
 
-import LocationModel from "./location.model.js";
+import { LocationModel } from "./location.model.js";
 
-export default class AddressModel {
+export class AddressModel {
   country: string;
   state: string;
   city: string;

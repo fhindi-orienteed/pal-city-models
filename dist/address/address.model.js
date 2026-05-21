@@ -1,5 +1,5 @@
-import LocationModel from "./location.model.js";
-export default class AddressModel {
+import { LocationModel } from "./location.model.js";
+export class AddressModel {
     constructor(data) {
         this.city = data.city;
         this.state = data.state;

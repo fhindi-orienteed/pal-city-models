@@ -1,23 +1,32 @@
-import ExploreCategoryModel from "./explore-category.model.js";
+import { ExploreCategoryModel } from "./explore-category.model.js";
+import { ExploreGroupDescriptionModel } from "./explore-group-description.model.js";
 
-export default class ExploreGroupModel {
+export class ExploreGroupModel {
     id: number;
+    handle: string;
     totalItems: number;
     sequence: number;
     status: string;
-    title: string;
-    categories: ExploreCategoryModel[];
+    thumbnail?: string;
+    mobileHomeFeed: boolean;
+    categories: ExploreCategoryModel[] = [];
+    description?: ExploreGroupDescriptionModel;
 
     constructor(data: any) {
         this.id = data.id;
-        this.title = data.title || '';
+        this.handle = data.handle;
+        this.thumbnail = data.thumbnail;
         this.totalItems = data.totalItems || 0;
-        this.status = data.status || 'active';
+        this.status = data.status || 'draft';
+        this.mobileHomeFeed = data.mobileHomeFeed || false;
         this.sequence = data.sequence || 0;
+
+        if (data.description) {
+            this.description = new ExploreGroupDescriptionModel(data.description);
+        }
+
         if (data.categories) {
             this.categories = data.categories.map((category: any) => new ExploreCategoryModel(category));
-        } else {
-            this.categories = [];
         }
     }
 }

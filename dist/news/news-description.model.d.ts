@@ -1,6 +1,6 @@
-export default class NewsDescriptionModel {
+export declare class NewsDescriptionModel {
     title?: string;
-    description?: string;
-    image?: string;
+    shortDescription?: string;
+    longDescription?: string;
     constructor(data: any);
 }

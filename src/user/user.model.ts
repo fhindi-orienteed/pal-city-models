@@ -1,4 +1,4 @@
-import AddressModel from "../address/address.model.js";
+import { AddressModel } from "../address/address.model.js";
 import { UserProfileModel } from "./user-profile.model.js";
 
 export class UserModel {

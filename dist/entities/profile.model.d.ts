@@ -1,4 +1,4 @@
-import EntityModel from "./entity.model.js";
-export default class ProfileModel extends EntityModel {
+import { EntityModel } from "./entity.model.js";
+export declare class ProfileModel extends EntityModel {
     constructor(data: any);
 }

@@ -1,5 +1,5 @@
 
-export default class LocationModel {
+export class LocationModel {
     latitude?: string;
     longitude?: string;
 

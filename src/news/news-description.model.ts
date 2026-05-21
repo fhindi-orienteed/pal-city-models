@@ -1,12 +1,12 @@
 
-export default class NewsDescriptionModel {
+export class NewsDescriptionModel {
     title?: string;
-    description?: string;
-    image?: string;
+    shortDescription?: string;
+    longDescription?: string;
 
     constructor(data: any) {
         this.title = data.title;
-        this.description = data.description;
-        this.image = data.image;
+        this.shortDescription = data.shortDescription;
+        this.longDescription = data.longDescription;
     }
 }

@@ -1,8 +1,9 @@
-export default class ConfigModel {
+export declare class ConfigModel {
     id: number;
     group: string;
     namespace: string;
     key: string;
+    type: string;
     value: string;
     title?: string;
     description?: string;

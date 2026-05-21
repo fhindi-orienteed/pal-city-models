@@ -1,27 +1,29 @@
+// Common Models
+export * from "./common/index.js";
+
 // Events Models
-export * from "./events/event.model.js";
-export * from "./events/event-organizer.model.js";
+export * from "./events/index.js";
 
 // Entities Models
-export * from "./entities/entity.model.js";
-export * from "./entities/business.model.js";
-export * from "./entities/building.model.js";
+export * from "./entities/index.js";
 
 // Address Models
-export * from "./address/address.model.js";
-export * from "./address/location.model.js";
-
-// Common Models
-export * from "./common/media.model.js";
-
-// Ads Models
-export * from "./ads/ads.model.js";
-export * from "./ads/ads-description.model.js";
+export * from "./address/index.js";
 
 // Explore Models
-export * from "./explore/explore-group.model.js";
-export * from "./explore/explore-category.model.js";
+export * from "./explore/index.js";
+
+// Service Models
+export * from "./service/index.js";
+
+// Ads Models
+export * from "./ads/index.js";
 
 // User Models
-export * from "./user/user.model.js";
-export * from "./user/user-profile.model.js";
+export * from "./user/index.js";
+
+// News Models
+export * from "./news/index.js";
+
+// Offer Models
+export * from "./offers/index.js";
