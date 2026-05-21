@@ -1,3 +1,5 @@
+import { AddressModel } from "../address/address.model.js";
+import { UserProfileModel } from "./user-profile.model.js";
 export declare class UserModel {
     id: number;
     username: string;
@@ -5,23 +7,9 @@ export declare class UserModel {
     status: string;
     role: string;
     createdDate: Date;
-    updatedDate: Date;
+    updatedDate?: Date;
+    lastLogin?: Date;
     profile?: UserProfileModel;
-    constructor(data: any);
-}
-export declare class UserProfileModel {
-    id: number;
-    userId: number;
-    firstName: string;
-    middleName: string;
-    lastName: string;
-    gender: string;
-    birthday: Date;
-    phone: string;
-    mobile: string;
-    email: string;
-    image: string;
-    createdDate: Date;
-    updatedDate: Date;
+    address?: AddressModel;
     constructor(data: any);
 }

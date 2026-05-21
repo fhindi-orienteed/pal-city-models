@@ -9,13 +9,12 @@ export * from "./address/index.js";
 // Explore Models
 export * from "./explore/index.js";
 // Service Models
-export * from "./service/service.model.js";
+export * from "./service/index.js";
 // Ads Models
-export * from "./ads/ads.model.js";
-export * from "./ads/ads-description.model.js";
+export * from "./ads/index.js";
+// User Models
+export * from "./user/index.js";
 // News Models
-export * from "./news/news.model.js";
-export * from "./news/news-description.model.js";
+export * from "./news/index.js";
 // Offer Models
-export * from "./offers/offer.model.js";
-export * from "./offers/offer-description.model.js";
+export * from "./offers/index.js";
