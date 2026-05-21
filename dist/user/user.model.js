@@ -3,7 +3,7 @@ import { UserProfileModel } from "./user-profile.model.js";
 export class UserModel {
     constructor(data) {
         this.id = data.id;
-        this.username = data.username;
+        this.userName = data.userName;
         this.password = data.password;
         this.status = data.status;
         this.role = data.role;
