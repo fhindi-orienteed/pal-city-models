@@ -7,7 +7,7 @@ export class UserModel {
         this.userName = data.userName;
         this.password = data.password;
         this.status = data.status;
-        this.roles = ((_a = data.userRoles) === null || _a === void 0 ? void 0 : _a.map((ur) => ur.role)) || [];
+        this.roles = ((_a = data.userRoles) === null || _a === void 0 ? void 0 : _a.map((ur) => ur.roleId)) || [];
         this.lastLogin = data.lastLogin;
         this.createdDate = data.createdDate;
         this.updatedDate = data.updatedDate;
