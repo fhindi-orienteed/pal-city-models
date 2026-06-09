@@ -5,6 +5,7 @@ export declare class EntityModel {
     id: number;
     handle: string;
     type: string;
+    subType?: string;
     status: string;
     createdAt: Date;
     rate?: number;

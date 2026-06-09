@@ -5,8 +5,9 @@ export class EntityModel {
     constructor(data) {
         var _a;
         this.id = data.id;
-        this.handle = data.identifier;
+        this.handle = data.handle;
         this.type = data.type;
+        this.subType = data.subType;
         this.status = data.status;
         this.createdAt = data.createdAt;
         this.rate = data.rate || 0;
