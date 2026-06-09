@@ -3,3 +3,5 @@ export * from "./social-links.model.js";
 export * from "./opening-hours.model.js";
 export * from "./paginated.model.js";
 export * from "./pagination-meta.model.js";
+export * from "./city.model.js";
+export * from "./city-description.model.js";

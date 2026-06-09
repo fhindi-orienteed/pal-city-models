@@ -6,7 +6,7 @@ export class UserModel {
     userName: string;
     password: string;
     status: string;
-    role: string;
+    roles: number[];
     createdDate: Date;
     updatedDate?: Date;
     lastLogin?: Date;
@@ -18,7 +18,7 @@ export class UserModel {
         this.userName = data.userName;
         this.password = data.password;
         this.status = data.status;
-        this.role = data.role;
+        this.roles = data.userRoles?.map((ur: any) => ur.roleId) || [];
         this.lastLogin = data.lastLogin;
         this.createdDate = data.createdDate;
         this.updatedDate = data.updatedDate;

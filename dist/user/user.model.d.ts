@@ -5,7 +5,7 @@ export declare class UserModel {
     userName: string;
     password: string;
     status: string;
-    role: string;
+    roles: number[];
     createdDate: Date;
     updatedDate?: Date;
     lastLogin?: Date;

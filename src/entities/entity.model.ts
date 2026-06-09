@@ -6,6 +6,7 @@ export class EntityModel {
     id: number;
     handle: string;
     type: string;
+    subType?: string;
     status: string;
     createdAt: Date;
     rate?: number;
@@ -18,6 +19,7 @@ export class EntityModel {
         this.id = data.id;
         this.handle = data.handle;
         this.type = data.type;
+        this.subType = data.subType;
         this.status = data.status;
         this.createdAt = data.createdAt;
         this.rate = data.rate || 0;
