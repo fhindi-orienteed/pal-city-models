@@ -16,7 +16,7 @@ export class EntityModel {
 
     constructor(data: any) {
         this.id = data.id;
-        this.handle = data.identifier;
+        this.handle = data.handle;
         this.type = data.type;
         this.status = data.status;
         this.createdAt = data.createdAt;
